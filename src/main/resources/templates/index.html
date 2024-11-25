@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Ingredients</title>
+</head>
+<body>
+<h1>Select Ingredients</h1>
+<form action="/cocktails" method="post">
+    <div>
+        <ul>
+            <th:block th:each="ingredient : ${ingredients}">
+                <li>
+                    <label>
+                        <input type="checkbox" name="ingredients" th:value="${ingredient}">
+                        <span th:text="${ingredient}"></span>
+                    </label>
+                </li>
+            </th:block>
+        </ul>
+    </div>
+    <button type="submit">Find Cocktails</button>
+</form>
+</body>
+</html>

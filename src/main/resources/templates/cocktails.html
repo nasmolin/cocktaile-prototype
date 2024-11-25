@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cocktails</title>
+</head>
+<body>
+<h1>Available Cocktails</h1>
+<ul>
+  <th:block th:each="cocktail : ${cocktails}">
+    <li>
+      <span th:text="${cocktail.name}"></span>
+    </li>
+  </th:block>
+</ul>
+<a href="/">Back to Ingredients</a>
+</body>
+</html>
